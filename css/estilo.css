@@ -1,0 +1,203 @@
+/* Estilos Globais */
+:root {
+    --primary-color: #00ff00; /* Vermelho vibrante */
+    --secondary-color: #00a800; /* Azul do controle */
+    --background-color: #121212;
+    --text-color: #cccccc;
+    --card-bg: #1e1e1e;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    padding: 0.5rem 1.0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease;
+    transform: 0.3s ease;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Seção de Destaque (Hero) */
+.hero {
+    background: linear-gradient(to right, #212121, #64dd17);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: black;
+    font-weight: bold;
+}
+
+/* Grid de Itens */
+h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+
+#causas p{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.item-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 1rem;
+}
+
+.item-info h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.buy-button {
+    background-color:  var(--primary-color);
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .item-grid {
+        grid-template-columns: 1fr;
+    }
+}
